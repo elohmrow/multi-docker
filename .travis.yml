@@ -17,7 +17,7 @@ after_success:
   - docker build -t elohmrow/multi-docker-worker ./worker
   # push images to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push multi-docker-client
-  - docker push multi-docker-nginx
-  - docker push multi-docker-server
-  - docker push multi-docker-worker
+  - docker push elohmrow/multi-docker-client
+  - docker push elohmrow/multi-docker-nginx
+  - docker push elohmrow/multi-docker-server
+  - docker push elohmrow/multi-docker-worker
